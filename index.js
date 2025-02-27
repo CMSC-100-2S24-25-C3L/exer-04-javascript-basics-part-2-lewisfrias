@@ -1,4 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
+import validator from "validator";
+import fs, { appendFileSync, openSync } from "fs";
 
 function generateUniqueID(fname, lname) {
   var l_fname = fname.toLowerCase();
@@ -9,6 +11,28 @@ function generateUniqueID(fname, lname) {
   return uniqueid;
 }
 
-function addAccount() {}
+function addAccount(acc) {
+  if (acc.length != 4) {
+    return;
+  } else {
+    if (
+      acc[0] !== "" &&
+      acc[1] !== "" &&
+      validator.isEmail(acc[2]) &&
+      acc[3] >= 18
+    ) {
+      console.log("Valid");
+      var uniqueID = generateUniqueID(acc[0], acc[1]);
+      var fd = openSync("users.txt", "a");
+      appendFileSync(
+        fd,
+        `${acc[0]}, ${acc[1]}, ${acc[2]}, ${acc[3]}, ${uniqueID} \n`,
+        "utf8"
+      );
+    } else {
+      console.log("Invalid");
+    }
+  }
+}
 
-export default generateUniqueID;
+export default { generateUniqueID, addAccount };

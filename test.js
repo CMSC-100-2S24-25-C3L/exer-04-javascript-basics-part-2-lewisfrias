@@ -1,5 +1,9 @@
-import generateUniqueID from "./index.js";
+import index from "./index.js";
 
 //const generateUniqueID = require("./index.js");
+var fname = "Lewis";
+var lname = "Frias";
+index.generateUniqueID(fname, lname);
 
-console.log(generateUniqueID("Lewis", "Frias"));
+const array1 = [fname, lname, "lfrias@w3c.com", 19];
+index.addAccount(array1);
