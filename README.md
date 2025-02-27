@@ -1,1 +1,7 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/iUr6FluD)
+Exercise 4: Javascript Basics Part 2
+Name: Ram Lewis A. Frias
+Deg Prog: BSCS
+
+Link: https://github.com/CMSC-100-2S24-25-C3L/exer-04-javascript-basics-part-2-lewisfrias
+
+Key takeaways: I learned how to import/export js files to allow interaction between two (or more) files. Additionally, I learned about npm (fs, uuid, and validator) as well as the use of package.json
